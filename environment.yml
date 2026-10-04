@@ -1,0 +1,39 @@
+# Projeto de reconhecimento de ações: KTH e UCF11.
+# Ambiente para Linux/Windows, com PyTorch somente CPU.
+# Versões escolhidas para compatibilidade; não são um export do ambiente original.
+# Uso: conda env create -f environment.yml
+name: reconhecimento-acoes
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.10
+  - pip
+  - numpy=1.26.4
+  - scipy=1.13.1
+  - pandas=2.2.3
+  - scikit-learn=1.5.2
+  - xgboost=2.1.4
+  - opencv=4.10
+  - scikit-image=0.24
+  - pillow
+  - matplotlib=3.9
+  - seaborn=0.13
+  - tqdm
+  - joblib
+  - ffmpeg
+  - ipykernel
+  - pip:
+      - --extra-index-url https://download.pytorch.org/whl/cpu
+      - torch==2.5.1+cpu
+      - torchvision==0.20.1+cpu
+      - google-genai
+      - python-dotenv
+      - pydantic>=2,<3
+# Limites de threads também são definidos pelos scripts do projeto.
+variables:
+  OMP_NUM_THREADS: "1"
+  OPENBLAS_NUM_THREADS: "1"
+  MKL_NUM_THREADS: "1"
+  NUMEXPR_NUM_THREADS: "1"
+
