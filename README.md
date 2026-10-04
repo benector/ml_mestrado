@@ -1,4 +1,4 @@
-# Reconhecimento de ações: instruções de execução
+# Trabalho de Aprendizado de Máquina: Reconhecimento de ações
 
 O projeto contém duas pastas, `kth` e `ucf`. Execute os comandos dentro da pasta do dataset correspondente para que os caminhos relativos usados pelos scripts sejam resolvidos corretamente.
 
